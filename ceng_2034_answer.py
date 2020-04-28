@@ -17,15 +17,15 @@ if system_name == "Linux":
 
 #print 5 min loadavg value
 a, b, c = os.getloadavg()
-print("5 min loadavg value: %s" % c)
+print("5 min loadavg value: %s" % b)
 
 #print cpu core count
 cpuCore = os.cpu_count()
 print("CPU core count: %s" % cpuCore)
 
 '''
-#if the loadavg value is close to cpu core count then exit script
-if cpuCore - c < 1:
+#if the 5 min loadavg value is close to cpu core count then exit script
+if cpuCore - b < 1:
 	print("Exited from the script")
 	sys.exit()
 '''
